@@ -3,10 +3,13 @@
 *,
 *::after,
 *::before {
+    box-sizing: border-box;
+}
+
+* {
     margin: 0;
     padding: 0;
     list-style: none;
-    box-sizing: border-box;
 }
 
 html,
@@ -90,7 +93,7 @@ body {
     background-size: 50px 50px;
     background-position: center;
     background-repeat: no-repeat;
-    width: 350px;
+    max-width: 350px;
     margin: 10px auto;
     height: 65px;
 }
@@ -136,16 +139,31 @@ body {
 #main-body {
     margin-top: 50px;
     display: flex;
-    justify-content: space-between;
+    gap: 20px;
+    justify-content: center;
 }
 
 .input-area {
     display: flex;
     flex-basis: 48%;
-    margin-right: 4%;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+}
+
+.status-area {
+    flex-basis: 48%;
+    margin: 30px auto;
+}
+
+@media (max-width: 400px) {
+    #main-body {
+        flex-direction: column-reverse;
+    }
+
+    .status-area {
+        margin: 0 auto;
+    }
 }
 
 .input-area input {
@@ -177,22 +195,4 @@ body {
     background: #845EC2;
 }
 
-.status-area {
-    flex-basis: 48%;
-    margin-top: 10px;
-}
-
 /* Main Area */
-
-
-
-/* Responsive */
-
-@media (max-width: 400px) {
-    .status-area {
-        font-size: 11px;
-        margin-top: 13px;
-    }
-}
-
-/* Responsive */
