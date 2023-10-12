@@ -2,30 +2,24 @@
 let randomNum = Math.floor(Math.random() * 20 + 1);
 let guessNum = (document.getElementById("guess").textContent = randomNum);
 
-
 // Status Area
 let rightMessage = document.querySelector(".message");
 let wrongMessage = document.querySelector(".message");
 
-
 // Win Image
 let winImage = document.getElementById("win");
 
-
 // Hiding Image
 let hidingImage = document.getElementById("hide");
-
 
 // Reset Button
 let resetBtn = document.querySelector("#reset").addEventListener("click", () => {
     location.reload();
 });
 
-
 // Storing Final Result
 let finalResult = document.getElementById("score");
 let initialScore = 0;
-
 
 // Verifying Output
 let inputBtn = document.getElementById("input");
